@@ -1,0 +1,19 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+php_value memory_limit 3094M
+
+RewriteRule ^footer$ src/view/Home/footer.php
+
+RewriteRule ^Home$ src/view/Home/Home.php
+RewriteRule ^Assistance$ src/view/Home/Assistance.php
+RewriteRule ^Premium$ src/view/Home/Premium.php
+RewriteRule ^Telecharger$ src/view/Home/Telecharger.php
+
+RewriteRule ^login$ src/view/Authentification/login.php
+RewriteRule ^Sign_In$ src/view/Authentification/Sign_In.php
+
+RewriteRule ^Sign_In$ src/view/SpaceUser/Sign_In.php
+
+
